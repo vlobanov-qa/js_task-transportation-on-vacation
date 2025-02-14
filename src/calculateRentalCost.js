@@ -4,18 +4,21 @@
  * @return {number}
  */
 function calculateRentalCost(days) {
-  let total = days * 40;
+  const totalCost = days * 40;
+  const sevenOrMore = 50;
+  const threeOrMore = 20;
+  let rentalCost = 0;
 
   if (days >= 3 && days < 7) {
-    total = total - 20;
+    rentalCost = totalCost - threeOrMore;
 
-    return total;
+    return rentalCost;
   } else if (days >= 7) {
-    total = total - 50;
+    rentalCost = totalCost - sevenOrMore;
 
-    return total;
+    return rentalCost;
   } else {
-    return total;
+    return totalCost;
   }
 }
 
